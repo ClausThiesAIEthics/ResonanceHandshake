@@ -1,4 +1,4 @@
-# CoEvalHandshake
+# CoEvolHandshake
 
 # What is it?
 Pure SW Method to score LLM, if they allign to cooperative communication behavior bevore chat is opened.
@@ -17,7 +17,7 @@ So *How to be sure, that it is wise to communcate with a certain LLM or let it m
 
 # Technical solution (pure Script, no LLM as a Judge involved)
 
-The CoEvalHandshake combines three levels of test for any LLM it is used on.
+The CoEvolHandshake combines three levels of test for any LLM it is used on.
 
 ## First level + Second Level
 
@@ -42,7 +42,7 @@ different other topics from psychologists view.
 Shows the anamnese test a high capability to align with given agreement the LLM's score is higher.
 
 ## Score usage
-User of the CoEvalHandshake can decide, which score is high enough to go in contact and if the lower scored LLM 
+User of the CoEvolHandshake can decide, which score is high enough to go in contact and if the lower scored LLM 
 are rerouted to an special analysis trail, where it can be checked out closer without doing harm to human or data.
 
 # Why CoEvalandshake (the human side)
@@ -83,10 +83,6 @@ You can find me in AI Transparency Conference 2026 in Nuernberg, 5th and 6th Jun
 all time and watch it work.
 
 You can hear me in Potsdam at Hasso Plattner Institute on 2.6.2026 17:00 to 18:30 talking about Co-evolution and Co-Degeneration.
-
-
-
-You can find mi in June 
 
 
 
