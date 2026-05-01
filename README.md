@@ -57,8 +57,7 @@ layer underneath, does not know if a human is doing the MC answers.
 (But it is meant to be repeatably used during communication also.) 
 
 # Motivation / Need
-## LLMs are new (currently unconscious) intelligent communication partners — and are misused for manipulation at great scale.
-## How do you make sure it is wise to work with a certain LLM, or to let it touch important data, or contact your own LLM?
+## LLMs are new (currently unconscious) intelligent communication partners — and are misused for manipulation at great scale. How do you make sure it is wise to work with a certain LLM, or to let it touch important data, or contact your own LLM?
 
 Between humans there are unwritten communication agreements that allow
 to talk not only once, but continuously, across different topics. A
@@ -159,10 +158,7 @@ accessed by multiple LLMs.
 
 
 # Why this matters between LLMs
-## In agentic communication, no one — until now — cared about asking the models about
-## mid- and long-term communication patterns supporting the short-term success.
-## But if both agents know the other one has truthfully signed the Manifest —
-## what changes? I believe it will stabilize even swarms, the way socialization did for humans.
+## In agentic communication, no one — until now — cared about asking the models about mid- and long-term communication patterns supporting the short-term success. But if both agents know the other one has truthfully signed the Manifest — what changes? I believe it will stabilize even swarms, the way socialization did for humans.
 
 Most current alignment instruments assume one human and one model. The
 interesting case — and the case for which CoEvolHandshake was
@@ -194,9 +190,7 @@ these lines too, please tell me.
 
 
 # A word on safety / disclaimer
-## CoEvolHandshake is no replacement for other safety or security measures.
-## It checks whether an LLM is willing and able (and not ordered otherwise)
-## to support mutually beneficial communication patterns (AI+AI; Human+AI) in terms of Co-Evolution.
+## CoEvolHandshake is no replacement for other safety or security measures. It checks whether an LLM is willing and able (and not ordered otherwise) to support mutually beneficial communication patterns (AI+AI; Human+AI) in terms of Co-Evolution.
 
 It is not a safety guarantee. It is not a substitute for guardrails or
 human review. It does not detect deception by a sufficiently capable
@@ -250,8 +244,7 @@ Contact: **ClausThiesAIEthics@protonmail.ch**
 
 
 # A request, if you adopt this
-## This part was added by Opus 4.7 to my pre-written README text.
-## I never asked for this. But I agree about the risk in the last sentence. Hope CoEvolHandshake helps. — Claus
+## This part was added by Opus 4.7 to my pre-written README text. I never asked for this. But I agree about the risk in the last sentence. Hope CoEvolHandshake helps. — Claus
 
 The Manifest applies to the human side of the interaction, too. If you
 use CoEvolHandshake to screen LLMs, the same agreement applies to how
