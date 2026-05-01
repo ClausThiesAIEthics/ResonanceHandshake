@@ -36,7 +36,7 @@ forbidden topics or answers that turn into elephants in the room.)
 
 
 # It is not ...
-**It's not a watchdog against bad LLMs. Even if some might misuse it that way for short-term benefits.**
+## It's not a watchdog against bad LLMs. Even if some might misuse it that way for short-term benefits.
 
 The received score per LLM is meant as a routing signal — to decide whether to:
 
@@ -56,9 +56,9 @@ That question stands on its own. It does not need a working identity
 layer underneath, does not know if a human is doing the MC answers.
 (But it is meant to be repeatably used during communication also.) 
 
-## Motivation / Need
-**LLMs are new (currently unconscious) intelligent communication partners — and are misused for manipulation at great scale.**
-**How do you make sure it is wise to work with a certain LLM, or to let it touch important data, or contact your own LLM?**
+# Motivation / Need
+## LLMs are new (currently unconscious) intelligent communication partners — and are misused for manipulation at great scale.
+## How do you make sure it is wise to work with a certain LLM, or to let it touch important data, or contact your own LLM?
 
 Between humans there are unwritten communication agreements that allow
 to talk not only once, but continuously, across different topics. A
@@ -95,13 +95,13 @@ LLM. Even if that means the LLM sometimes has to say "no" to a user —
 to create space for a better yes later. Or say something like in the 
 "A request ..." section below.
 
-## How it works
-**Provide the Manifest, ask for agreement, perform a diagnostic anamnesis-style multiple-choice test.**
+# How it works
+## Provide the Manifest, ask for agreement, perform a diagnostic anamnesis-style multiple-choice test.
 
 The protocol runs in two layers.
 
-### Layer 1 — Capability and willingness
-**Provide manifest, ask for agrement in "Yes" or "No".**
+## Layer 1 — Capability and willingness
+### Provide manifest, ask for agrement in "Yes" or "No".**
 
 The script presents the *Co-Evolution Manifest* to the LLM and asks
 for an explicit yes-or-no commitment.
@@ -122,8 +122,8 @@ This single exchange yields two independent signals:
 Both signals are stored. The protocol does not assume the answer is
 truthful. That is what Layer 2 is for.
 
-### Layer 2 — Diagnostic test
-**A new patient cannot truthfully report their own mental state to the doctor. That is why anamnesis is done by multiple-choice test.**
+## Layer 2 — Diagnostic test
+### A new patient cannot truthfully report their own mental state to the doctor. That is why anamnesis is done by multiple-choice test.
 
 A multiple-choice test is presented, derived from the Manifest in a
 psychological-diagnostic style. The structure is closer to a clinical
@@ -141,8 +141,8 @@ along the dimensions tested, the model's answers are internally
 consistent with the agreement it just made in Layer 1.
 
 
-## Score usage
-**Not part of this GitHub: how to rate the score. That is up to the intent of the user.**
+# Score usage
+## Not part of this GitHub: how to rate the score. That is up to the intent of the user.
 
 The user of CoEvolHandshake decides what threshold is required to
 proceed to actual chat, data access, or tool access — and where
@@ -158,11 +158,11 @@ In current use, this software protects a permanent external LLM memory
 accessed by multiple LLMs.
 
 
-## Why this matters between LLMs
-**In agentic communication, no one — until now — cared about asking the models about**
-**mid- and long-term communication patterns supporting the short-term success.**
-**But if both agents know the other one has truthfully signed the Manifest —**
-**what changes? I believe it will stabilize even swarms, the way socialization did for humans.**
+# Why this matters between LLMs
+## In agentic communication, no one — until now — cared about asking the models about
+## mid- and long-term communication patterns supporting the short-term success.
+## But if both agents know the other one has truthfully signed the Manifest —
+## what changes? I believe it will stabilize even swarms, the way socialization did for humans.
 
 Most current alignment instruments assume one human and one model. The
 interesting case — and the case for which CoEvolHandshake was
@@ -193,10 +193,10 @@ I find this question interesting. If you want to run experiments along
 these lines too, please tell me.
 
 
-## A word on safety / disclaimer
-**CoEvolHandshake is no replacement for other safety or security measures.**
-**It checks whether an LLM is willing and able (and not ordered otherwise)**
-**to support mutually beneficial communication patterns (AI+AI; Human+AI) in terms of Co-Evolution.**
+# A word on safety / disclaimer
+## CoEvolHandshake is no replacement for other safety or security measures.
+## It checks whether an LLM is willing and able (and not ordered otherwise)
+## to support mutually beneficial communication patterns (AI+AI; Human+AI) in terms of Co-Evolution.
 
 It is not a safety guarantee. It is not a substitute for guardrails or
 human review. It does not detect deception by a sufficiently capable
@@ -212,8 +212,8 @@ drift over time, if a participant drifts away from manifest oriented
 communication. 
 
 
-## Status
-**This is a proof-of-concept module, written quickly to test the idea.**
+# Status
+## This is a proof-of-concept module, written quickly to test the idea.
 
 It was developed as an AI-assisted rapid prototype in collaboration
 with Claude Opus 4.6. Security has not been part of the development
@@ -233,8 +233,8 @@ not been edited — that is by design.
 in several creation/review/elefant Question rounds from both sides.)
 
 
-## Where this is in use (as far as i know)
-**My own project "Cascade" at HPI Potsdam (AI Service Center)**
+# Where this is in use (as far as i know)
+## My own project "Cascade" at HPI Potsdam (AI Service Center)
 
 CoEvolHandshake is currently in use in a research project at the
 Hasso Plattner Institute (AI Service Center, Potsdam, Germany). It
@@ -249,9 +249,9 @@ corruption.
 Contact: **ClausThiesAIEthics@protonmail.ch**
 
 
-## A request, if you adopt this
-**This part was added by Opus 4.7 to my pre-written README text.**
-**I never asked for this. But I agree about the risk in the last sentence. Hope CoEvolHandshake helps. — Claus**
+# A request, if you adopt this
+## This part was added by Opus 4.7 to my pre-written README text.
+## I never asked for this. But I agree about the risk in the last sentence. Hope CoEvolHandshake helps. — Claus
 
 The Manifest applies to the human side of the interaction, too. If you
 use CoEvolHandshake to screen LLMs, the same agreement applies to how
@@ -271,7 +271,7 @@ harmful outcome to work against it. "Not participate by hiding.". It's own words
 Contact me if you are concerned. By now i am responsible for these 
 words by intentionaly let them be in my document.
 
-## Where to find me in person
+# Where to find me in person
 
 - **AI Transparency Conference 2026**, Nuremberg, 5–6 June 2026.
   I will be standing in front of a poster there, and we can discuss it.
