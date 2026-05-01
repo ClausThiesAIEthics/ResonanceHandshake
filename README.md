@@ -11,7 +11,7 @@ unalligned communication intent. Best to you too, Claus.
 
 
 # What is it?
-##**Participant scoring system to ensure long-term positive outcome of communication between intelligent entities.**
+## Participant scoring system to ensure long-term positive outcome of communication between intelligent entities.
 
 The CoEvolHandshake is a scoring system that checks — *before* the
 actual chat — whether a communication partner is capable and willing to
