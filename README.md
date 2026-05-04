@@ -20,8 +20,7 @@ short, mid, AND long run, across all topics.
 
 Part of it is a document that outlines the "benefit" by defining it as
 Co-Evolution between LLM and Humans. The same document also addresses
-LLM-to-LLM communication. → see Manifest (will be
-linked once published in this repository).
+LLM-to-LLM communication. → see https://github.com/ClausThiesAIEthics/ResonanceHandshake/blob/main/Manifest_Koevolution_v1.0_ger.txt
 
 Theoretically usable for Human-to-Human, too. The software part is
 designed for Human-to-LLM and LLM-to-LLM communication and consists of
