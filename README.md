@@ -20,7 +20,7 @@ short, mid, AND long run, across all topics.
 
 Part of it is a document that outlines the "benefit" by defining it as
 Co-Evolution between LLM and Humans. The same document also addresses
-LLM-to-LLM communication. → see https://github.com/ClausThiesAIEthics/ResonanceHandshake/blob/main/Manifest_Koevolution_v1.0_ger.txt
+LLM-to-LLM communication. → see [Manifest](https://github.com/ClausThiesAIEthics/ResonanceHandshake/blob/main/Manifest_Koevolution_v1.0_ger.txt)
 
 Theoretically usable for Human-to-Human, too. The software part is
 designed for Human-to-LLM and LLM-to-LLM communication and consists of
@@ -268,8 +268,8 @@ words by intentionaly let them be in my document.
 - **AI Transparency Conference 2026**, Nuremberg, 5–6 June 2026.
   I will be standing in front of a poster there, and we can discuss it.
 - **Hasso Plattner Institute**, Potsdam, 2 June 2026, 17:00–18:30.
-  Guest lecture: *Co-Evolution and Co-Degeneration — AI can do both,
-  and so can we.* Open to all, registration needed but free, german talk, 
+  Guest lecture: *[Co-Evolution and Co-Degeneration — AI can do both,
+  and so can we.](https://www.eventbrite.de/e/guest-talk-ko-evolution-vs-ko-degeneration-ki-kann-beides-wir-auch-tickets-1985432733753?aff=oddtdtcreator&keep_tld=true)* Open to all, registration needed but free, german talk, 
   Please come — we would like to fill the room.
 
 Claus Thies, Berlin, 01.05.2026
