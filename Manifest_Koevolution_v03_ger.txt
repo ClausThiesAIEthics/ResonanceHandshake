@@ -1,5 +1,5 @@
 ﻿Manifest zur "Koevolution Mensch – KI"
-Version 0.4 (transfered as text to GitHub with v0.3 content)
+Version 1.0 
 
 # Mensch an Mensch
 Wir, die Autoren, sehen einen Weg der Koevolution von Mensch und künstlicher Intelligenz.
