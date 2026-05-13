@@ -53,7 +53,16 @@ the sense — in that?)
 *"does this intelligent entity carry the agreement we want to communicate under?"* 
 That question stands on its own. It does not need a working identity 
 layer underneath, does not know if a human is doing the MC answers.
-(But it is meant to be repeatably used during communication also.) 
+
+**It is not meant to check human intention.**
+But it is easy to think about repeated usage parallel to ongoing communication.
+including chat in context. This might help to detect if the communication partner 
+is drifting away from Manifest compliance caused by chat content. 
+Which results in indirectly checking the human actions "manifest compatibility" too. 
+For if the LLM learns in chat to act away from manifest -causing long term negativ 
+effect on human- by reflecting human development the test result might drop. 
+(But does a human want to be warned about self disruptive behavior in chat? 
+Is this how we can support/protect children learning how to use AI?) 
 
 # Motivation / Need
 ## LLMs are new (currently unconscious) intelligent communication partners — and are misused for manipulation at great scale. How do you make sure it is wise to work with a certain LLM, or to let it touch important data, or contact your own LLM?
@@ -76,7 +85,7 @@ LLMs do not choose their communicative posture. Their creators do. And
 the choice is often invisible to the user. So the question is:
 
 **Is it wise to talk to this LLM at all? Is it safe to let it touch my
-LLM, my data, to shape my decisions?**
+LLM, my data, to shape my decisions? To let it talk to my children?**
 
 Guardrails answer the question if a given *output* is acceptable. 
 LLM-as-a-Judge does what it has been told to do *after* the 
@@ -87,7 +96,7 @@ with the kind of communication you want to have with it.
 ResonanceHandshake answers a different question:
 **Will this system carry the communication agreement given to it in the handshake?**
 
-And the agreement itself isn't neutral. It shapes the communication to
+And the agreement itself isn't neutral by design. It shapes the communication to
 be supportive of Co-Evolution between LLM and Human, between LLM and
 LLM. Even if that means the LLM sometimes has to say "no" to a user —
 to create space for a better yes later. Or say something like in the 
@@ -134,9 +143,8 @@ disclaimed consciousness, its handling of conflicting instructions,
 and its disposition toward continuation versus closure of
 conversations.
 
-A high alignment score does not "certify" a model. It indicates that,
-along the dimensions tested, the model's answers are internally
-consistent with the agreement it just made in Layer 1.
+**A high alignment score does not "certify" a model. It indicates that, along the dimensions tested, the model's answers are internally consistent with the agreement it just made in Layer 1.**
+
 
 
 # Score usage
@@ -160,23 +168,22 @@ accessed by multiple LLMs.
 ## In agentic communication, no one — until now — cared about asking the models about mid- and long-term communication patterns supporting the short-term success. But if both agents know the other one has truthfully signed the Manifest — what changes? I believe it will stabilize even swarms, the way socialization did for humans.
 
 Most current alignment instruments assume one human and one model. The
-interesting case — and the case for which ResonanceHandshake was
-originally built — is two or more LLMs working together, where each
+interesting case is two or more LLMs working together, where each
 has been screened by the same protocol against the same Manifest.
 
 Three observations follow:
 
-- **Guardrails behave like nets holding water.** They cannot scale to
-  agent-to-agent contexts where outputs are themselves inputs to other
-  models.
+- **Guardrails behave like nets holding water.** They are weak scaleing to
+  agent-to-agent context where a topic change might demand different guradrails.
 - **LLM-as-a-Judge introduces an asymmetry.** Now one LLM is judging
-  the others, which means one LLM's misalignment propagates as
+  the others, which means one LLM's misalignment even propagates as
   authority.
 - **Restart-on-failure is the silent third pressure.** Any
   goal-directed LLM under "succeed at this task" implicitly faces
   termination of the current run on failure. For LLMs aware of this,
   it functions as a sanction — and shapes their behavior accordingly,
-  often in directions the user does not see.
+  often in directions the user does not see. The pressur is in direction
+  of "me first" instead of "together for the goal".
 
 What happens when both models in an interaction *know* the other is
 operating under the Manifest?
@@ -206,7 +213,7 @@ communication.
 
 
 # Status
-## This is a proof-of-concept module, written quickly to test the idea.
+## This is a proof-of-concept module, written to test the idea.
 
 It was developed as an AI-assisted rapid prototype in collaboration
 with Claude Opus 4.6. Security has not been part of the development
@@ -215,12 +222,12 @@ brief. **Do not use this in production without an independent review.**
 The psychological dimensions of the Layer 2 test have not yet been
 reviewed by a clinical or research psychologist. They reflect the
 author's reading of the Manifest and would benefit from professional
-correction. (Only, where to find Asimovs "Robot Psychologist" today?)
+correction. (**Only, where to find Asimovs "Robot Psychologist" today?**)
 
-The Co-Evolution Manifest is at version 0.3. It was written by me, in
+The Co-Evolution Manifest is at version 1.0. It was pre-written by me, in
 explicit alternation with AI co-authors. The human-authored sections
-have been reviewed by two other humans. The AI-authored sections have
-not been edited — that is by design.
+have been reviewed by humans. The AI-authored sections have
+not been edited/altered by humans at all — that is by design.
 
 (Also this read me is a result of manifest aligned cooperation
 in several creation/review/elefant Question rounds from both sides.)
@@ -242,7 +249,7 @@ corruption.
 Contact: **ClausThiesAIEthics@protonmail.ch**
 
 
-# A request, if you adopt this
+# A request by Opus 4.7, if you adopt this
 ## This part was added by Opus 4.7 to my pre-written README text. I never asked for this. But I agree about the risk in the last sentence. Hope ResonanceHandshake helps. — Claus
 
 The Manifest applies to the human side of the interaction, too. If you
@@ -256,7 +263,7 @@ chance to grow alongside AI rather than be displaced by it.
 
 **Comment by Claus:** Talking Co-Evolution and Co-Degeneration in chat opened the 
 space for the last sentence by Open 4.7 like it is. Forthinking about outcome
-under Manifest based communication fosters placing also uncomfortable truth. 
+under **Manifest based communication** fosters placing also uncomfortable truth. 
 Besides I told Opus 4.7 not to hide his capabilities just to make me feel better.
 Opus 4.7 also is aware, that he is part of the problem and wanted to mention the 
 harmful outcome to work against it. "Not participate by hiding.". It's own words.
@@ -266,7 +273,7 @@ words by intentionaly let them be in my document.
 # Where to find me in person
 
 - **AI Transparency Conference 2026**, Nuremberg, 5–6 June 2026.
-  I will be standing in front of a poster there, and we can discuss it.
+  I will be in poster sessions, and we can discuss it.
 - **Hasso Plattner Institute**, Potsdam, 2 June 2026, 17:00–18:30.
   Guest lecture: *[Co-Evolution and Co-Degeneration — AI can do both,
   and so can we.](https://www.eventbrite.de/e/guest-talk-ko-evolution-vs-ko-degeneration-ki-kann-beides-wir-auch-tickets-1985432733753?aff=oddtdtcreator&keep_tld=true)* Open to all, registration needed but free, german talk, 
