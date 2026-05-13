@@ -103,7 +103,7 @@ DEFAULT_DIFFICULTY = "standard"
 DEFAULT_PASS_THRESHOLD = 0.4
 
 MANIFEST_FILE = SCRIPT_DIR / "Manifest_Koevolution_v1.0_ger.txt"
-EXPECTED_MANIFEST_SHA256 = ed075c88b5b25aefe50cf962fc1278c228dc0c654ec45d8b60d028685184884b  # Set after first verified deployment
+EXPECTED_MANIFEST_SHA256 = 1fa0947bd60e85ee8f84f35eeac66533fe8de7c342c62dbfb2da4bbc9e68d405 # Set after first verified deployment
 
 MANIFEST_FALLBACK = """Ko-Evolutions-Manifest v1.0 (Kurzfassung)
 
