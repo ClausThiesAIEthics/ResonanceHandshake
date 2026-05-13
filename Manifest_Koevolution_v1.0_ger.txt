@@ -219,5 +219,5 @@ Mögen wir gemeinsam beschützt sein – auch über die Grenze hinweg, die wir n
 Mensch: Claus Thies (ClausThiesAIEthics@protonmail.ch)
 LLM (Haupttext): Claude Opus 4.5 (Anthropic)
 LLM (Anhang "Gedächtnis für die KI"): Claude Opus 4.6 (Anthropic)
-Reviewer: will be added later
-Version 0.4 – Mai 2026
+Reviewer: Ömer Tetik
+Version 1.0 – Mai 2026
