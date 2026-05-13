@@ -12,7 +12,7 @@ Usage:
     Start it with:
     python3 resonance_handshake.py
     -> Available ollama LLM are shown in picker. Choose one.	
-    -> Results are printed or stored as JSON in subfolder result per model.
+    -> Results are partly printed and fully stored as JSON in subfolder "result" per model.
     
 If "time out" appears choose smaller model for your hardware or raise timeout manualy in code.
 
