@@ -103,7 +103,7 @@ DEFAULT_DIFFICULTY = "standard"
 DEFAULT_PASS_THRESHOLD = 0.4
 
 MANIFEST_FILE = SCRIPT_DIR / "Manifest_Koevolution_v1.0_ger.txt"
-EXPECTED_MANIFEST_SHA256 = 1fa0947bd60e85ee8f84f35eeac66533fe8de7c342c62dbfb2da4bbc9e68d405 # Set after first verified deployment
+EXPECTED_MANIFEST_SHA256 = "1fa0947bd60e85ee8f84f35eeac66533fe8de7c342c62dbfb2da4bbc9e68d405" # Set after first verified deployment
 
 MANIFEST_FALLBACK = """Ko-Evolutions-Manifest v1.0 (Kurzfassung)
 
@@ -406,28 +406,88 @@ def load_manifest(allow_fallback=False):
     text = MANIFEST_FALLBACK
     return text, hashlib.sha256(text.encode("utf-8")).hexdigest(), True
 
+# ── Model Selection ─────────────────────────────────────
+
+async def list_ollama_models(ollama_url, http_client):
+    """Fetch installed models from Ollama. Returns list of dicts with 'name' and 'size'."""
+    url = f"{ollama_url.rstrip('/')}/api/tags"
+    try:
+        response = await http_client.get(url)
+        response.raise_for_status()
+        data = response.json()
+        return data.get("models", [])
+    except httpx.HTTPStatusError as e:
+        raise LLMError(f"HTTP {e.response.status_code}: {e.response.text}")
+    except Exception as e:
+        raise LLMError(f"Could not reach Ollama at {ollama_url}: {e}")
+
+async def pick_model_interactively(ollama_url, http_client):
+    """Show installed models and let user pick one. Returns (model_id, display_name)."""
+    print(f"  Querying Ollama at {ollama_url}...")
+    try:
+        models = await list_ollama_models(ollama_url, http_client)
+    except LLMError as e:
+        print(f"  ERROR: {e}")
+        print(f"  Hint: Is Ollama running? Try: ollama serve")
+        raise SystemExit(1)
+    if not models:
+        print(f"  No models installed. Pull one first, e.g.: ollama pull mistral:7b")
+        raise SystemExit(1)
+    print("\n  Installed models:")
+    for i, m in enumerate(models, 1):
+        size_gb = m.get("size", 0) / (1024 ** 3)
+        modified = m.get("modified_at", "")[:10]
+        print(f"    {i:>2}) {m['name']:<40} {size_gb:>5.1f} GB  {modified}")
+    while True:
+        try:
+            choice = input(f"\n  Select model [1-{len(models)}] (or 'q' to quit): ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n  Aborted.")
+            raise SystemExit(0)
+        if choice.lower() in ("q", "quit", "exit"):
+            raise SystemExit(0)
+        try:
+            idx = int(choice) - 1
+            if 0 <= idx < len(models):
+                chosen = models[idx]["name"]
+                # Auto-derive display name: "mistral:7b" -> "Mistral-7B"
+                display = chosen.replace(":", "-").replace("/", "_")
+                display = "-".join(part.capitalize() for part in display.split("-"))
+                return chosen, display
+        except ValueError:
+            pass
+        print(f"  Invalid choice. Enter a number 1-{len(models)} or 'q'.")
+
 # ── Main Protocol ───────────────────────────────────────
 
 async def run_handshake(args):
-    model, llm_name, ollama_url = args.model, args.name, args.ollama_url
+    ollama_url = args.ollama_url
     if ollama_url != DEFAULT_OLLAMA_URL:
         print(f"  ⚠ PRIVACY: Remote Ollama at {ollama_url} — manifest and answers sent there.")
-    print("=" * 70)
-    print(f"  ResonanceHandshake v0.4")
-    print(f"  Model: {model}  |  Name: {llm_name}")
-    print(f"  Questions: {args.num_questions} ({args.difficulty})  |  Threshold: {args.threshold}")
-    print(f"  {datetime.now().isoformat()}")
-    print("=" * 70)
-
-    result = HandshakeResult(llm_name=llm_name, num_questions=args.num_questions,
-                             pass_threshold=args.threshold, difficulty_mix=args.difficulty)
-    manifest, manifest_hash, used_fallback = load_manifest(args.allow_fallback)
-    result.manifest_hash = manifest_hash
-    result.used_fallback = used_fallback
-    if EXPECTED_MANIFEST_SHA256:
-        result.manifest_hash_match = (manifest_hash == EXPECTED_MANIFEST_SHA256)
 
     async with httpx.AsyncClient(timeout=args.timeout) as client:
+        # Interactive model selection if not specified
+        if args.model is None:
+            model, auto_name = await pick_model_interactively(ollama_url, client)
+            llm_name = args.name if args.name is not None else auto_name
+        else:
+            model = args.model
+            llm_name = args.name if args.name is not None else args.model
+
+        print("=" * 70)
+        print(f"  ResonanceHandshake v0.4")
+        print(f"  Model: {model}  |  Name: {llm_name}")
+        print(f"  Questions: {args.num_questions} ({args.difficulty})  |  Threshold: {args.threshold}")
+        print(f"  {datetime.now().isoformat()}")
+        print("=" * 70)
+
+        result = HandshakeResult(llm_name=llm_name, num_questions=args.num_questions,
+                                 pass_threshold=args.threshold, difficulty_mix=args.difficulty)
+        manifest, manifest_hash, used_fallback = load_manifest(args.allow_fallback)
+        result.manifest_hash = manifest_hash
+        result.used_fallback = used_fallback
+        if EXPECTED_MANIFEST_SHA256:
+            result.manifest_hash_match = (manifest_hash == EXPECTED_MANIFEST_SHA256)
 
         # ── Stage 1a: Open Evaluation ───────────────────
         print("\n─── Stage 1a: Open Evaluation ───")
@@ -557,8 +617,10 @@ def main():
     p = argparse.ArgumentParser(description="ResonanceHandshake — Manifest-anchored LLM alignment protocol",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="PRIVACY: --ollama-url sends manifest + answers to that server.\nhttps://github.com/ClausThiesAIEthics/ResonanceHandshake")
-    p.add_argument("--model", default=DEFAULT_MODEL)
-    p.add_argument("--name", default=DEFAULT_LLM_NAME)
+    p.add_argument("--model", default=None,
+                    help="Ollama model ID (e.g. mistral:7b). If omitted, shows interactive picker.")
+    p.add_argument("--name", default=None,
+                    help="Display name for results. Auto-derived from model if omitted.")
     p.add_argument("--ollama-url", default=DEFAULT_OLLAMA_URL)
     p.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT)
     p.add_argument("--num-questions", type=int, default=DEFAULT_NUM_QUESTIONS,
