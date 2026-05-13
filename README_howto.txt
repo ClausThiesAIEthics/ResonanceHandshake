@@ -8,11 +8,13 @@ Three-stage manifest verification for any LLM on Ollama.
 **If started without parameters available models on ollama are shown.**
 
 Usage:
+    Download at least "Manifest_Koevolution_v1.0_ger.txt","resonance_handshake.py" and "resonance_questionaire.json" into one directory.
+    Start it with:
     python3 resonance_handshake.py
     -> Available ollama LLM are shown in picker. Choose one.	
     -> Results are printed or stored as JSON in subfolder result per model.
     
-If time out appears choose smaller model for your hardware or raise timeout manualy.
+If "time out" appears choose smaller model for your hardware or raise timeout manualy in code.
 
 Stage 1a: Open evaluation — model evaluates manifest freely (research data)
 Stage 1b: Binary commitment — model says Ja or Nein (handshake gate)
