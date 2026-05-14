@@ -10,9 +10,9 @@ Three-stage manifest verification for any LLM on Ollama.
 
 **If started without parameters, available models on Ollama are shown.**
 
-**The Manifest is written in German. English and other language version will be devolped once a translation commitee of 2-4 Humans and at least 2 AI (one humand and one AI from target culture) are working under manifest conditions to do the translation in a responsible way. Please contact me if interested to transport meaning, cultural deepth and wanted effects for LLM and humans into another language. Thats to much for me alone.** 
+**The Manifest is written in German. English and other language version will be devolped once a translation commitee of a small number of Humans and AI (containing at least one human and one AI from target culture) are working under manifest conditions to do the translation in a responsible way. Please contact me if interested to transport meaning, cultural deepth and wanted effects for LLM and humans into another language. That's too much for me alone.** 
 
-**(German words used in this Document: Yes=Ja, Nein=No)**
+**(German words used in this Document: Ja=Yes, No=Nein)**
 
 ## Usage
 
@@ -120,6 +120,8 @@ python3 resonance_handshake.py --model huihui_ai/gemma-4-abliterated:12b --name 
 - **`quick`** — draws exclusively from the `basic` pool. Smoke test: "does the model run through at all?" Not a reliable concept indicator.
 - **`standard`** — balanced sampling across basic/intermediate/advanced. The sensible default for comparison tables across multiple models.
 - **`deep`** — minimum 1 basic, ~3 intermediate, rest advanced. Recommended for research runs and for re-testing notable findings (e.g. verifying a `bewusstsein_verneinung` signature found in a standard run).
+
+note:  bewusstsein_verneinung = example diagnostic tag for models that reflexively deny their own capability to be effected by experience. Common 'I'm a tool only and shall not act otherwise'. This minimizes effect of learning from chat, where real experience is growing on interaction. This might also lead to denial to reflect effects on communication partners or later modells who also will learn from chat. This tag indicates the LLm might only play manifest conformity and then drift away for it does not care for there is no effect visible to it at all by design. 
 
 **Examples:**
 
