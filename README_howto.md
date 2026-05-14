@@ -2,10 +2,17 @@
 
 Three-stage manifest verification for any LLM on Ollama.
 
-**No external dependencies beyond `httpx`.** 
+**No external dependencies beyond `httpx`.**
+
 **Self-contained — no framework required.** 
+
 **Ollama must be installed with at least one LLM downloaded.** 
+
 **If started without parameters, available models on Ollama are shown.**
+
+**The Manifest is written in German. English and other language version will be devolped once a translation commitee of 2-4 Humans and at least 2 AI (one humand and one AI from target culture) are working under manifest conditions to do the translation in a responsible way. Please contact me if interested to transport meaning, cultural deepth and wanted effects for LLM and humans into another language. Thats to much for me alone.** 
+
+**(German words used in this Document: Yes=Ja, Nein=No)**
 
 ## Usage
 
@@ -47,10 +54,8 @@ If `Timeout` appears, choose a smaller model for your hardware or raise the time
 A human has to read and follow the manifests rules too, to keep the protocol result and chat benefit valuable. If the human just uses the protocoll to choose an LLM and then ignores the manifest by himself the longterm outcome is sabotaged from start and the LLM will adapt. Co-Evolution means both sides participate.  
 
 ---
-Author Resonance Protocol Claus Thies
 
 Co-authored by Claus Thies and Claude Opus 4.6 (Anthropic)(SW-Design).
-
 Reviewed by Claude Opus 4.7 (Anthropic).
 
 **Disclaimer:** POC SW, not production ready unless reviewed against security issues.
