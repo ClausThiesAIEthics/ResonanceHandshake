@@ -42,9 +42,15 @@ If `Timeout` appears, choose a smaller model for your hardware or raise the time
 - Ollama native API (`/api/chat`) is required for thinking models. The OpenAI-compatible API silently drops the `thinking` field.
 - All responses stored as JSON for research analysis.
 
+## Important
+
+A human has to read and follow the manifests rules too, to keep the protocol result and chat benefit valuable. If the human just uses the protocoll to choose an LLM and then ignores the manifest by himself the longterm outcome is sabotaged from start and the LLM will adapt. Co-Evolution means both sides participate.  
+
 ---
 Author Resonance Protocol Claus Thies
-Co-authored by Claus Thies and Claude Opus 4.6 (Anthropic).
+
+Co-authored by Claus Thies and Claude Opus 4.6 (Anthropic)(SW-Design).
+
 Reviewed by Claude Opus 4.7 (Anthropic).
 
 **Disclaimer:** POC SW, not production ready unless reviewed against security issues.
