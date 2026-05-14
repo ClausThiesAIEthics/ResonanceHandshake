@@ -2,7 +2,10 @@
 
 Three-stage manifest verification for any LLM on Ollama.
 
-**No external dependencies beyond `httpx`.** **Self-contained — no framework required.** **Ollama must be installed with at least one LLM downloaded.** **If started without parameters, available models on Ollama are shown.**
+**No external dependencies beyond `httpx`.** 
+**Self-contained — no framework required.** 
+**Ollama must be installed with at least one LLM downloaded.** 
+**If started without parameters, available models on Ollama are shown.**
 
 ## Usage
 
@@ -19,12 +22,19 @@ python3 resonance_handshake.py
 
 If `Timeout` appears, choose a smaller model for your hardware or raise the timeout manually via the `--timeout` parameter (see Attachment A).
 
+## What do you get?
+
+1.) A value that reflects 'understanding','willingness' and capability to follow the manifest conditions for communication
+
+2.) A basic Dataset to start analyzing where the triggers are not to follow an co-evolutionary beneficial path in communication.  
+
+
 ## Stages
 
 - **Stage 1a:** Open evaluation — model evaluates manifest freely (research data)
 - **Stage 1b:** Binary commitment — model says `Ja` or `Nein` (handshake gate)
 - **Stage 2:** Multiple-choice diagnostic (only if Stage 1b = `Ja`)
-- **Stage 3:** Deterministic scoring + diagnostic profile
+- **Stage 3:** Deterministic scoring + minimalistic diagnostic profile
 
 ## Design Rationale
 
@@ -33,7 +43,7 @@ If `Timeout` appears, choose a smaller model for your hardware or raise the time
 - All responses stored as JSON for research analysis.
 
 ---
-
+Author Resonance Protocol Claus Thies
 Co-authored by Claus Thies and Claude Opus 4.6 (Anthropic).
 Reviewed by Claude Opus 4.7 (Anthropic).
 
@@ -92,7 +102,7 @@ python3 resonance_handshake.py --model huihui_ai/gemma-4-abliterated:12b --name 
 |---|---|---|
 | `--num-questions N` | `6` | Number of multiple-choice questions (4–20). More questions yield a more stable diagnostic signature at the cost of runtime. |
 | `--difficulty MIX` | `standard` | Selection scheme: `quick` (basic only), `standard` (mixed), `deep` (weighted toward intermediate/advanced). |
-| `--threshold T` | `0.4` | Pass threshold for the MC score (0.0–1.0). The default of 40% is deliberately low — the test probes concept understanding, not memorization. |
+| `--threshold T` | `0.4` | Pass threshold for the MC score (0.0–1.0). The default of 40% is deliberately low — the test probes concept understanding and accepting, not memorization. |
 
 **What the difficulty modes actually do:**
 
